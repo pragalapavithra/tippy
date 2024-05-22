@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="48dp"
-        android:text="BaseLabel"
+        android:text="@string/base_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,8 +32,8 @@
         android:id="@+id/tvTipAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Tip"
+        android:layout_marginTop="60dp"
+        android:text="@string/tip_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toTopOf="@+id/tvTotalAmount"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
@@ -45,17 +45,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Total Amount"
+        android:text="@string/total_amount"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvTipAmount" />
 
     <EditText
         android:id="@+id/etBaseAmount"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="8"
-        android:hint="Base Amount"
+        android:hint="@string/base_amount"
         android:inputType="numberDecimal"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBottomOf="@id/tvBaseLabel"
@@ -83,6 +84,7 @@
         app:layout_constraintStart_toEndOf="@+id/tvTipAmount"
         app:layout_constraintStart_toStartOf="@+id/totalAmount"
         app:layout_constraintTop_toTopOf="@+id/tvTipAmount"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="19.96" />
 
     <TextView
@@ -94,6 +96,36 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvTotalAmount"
         app:layout_constraintStart_toEndOf="@+id/tvTotalAmount"
         app:layout_constraintTop_toTopOf="@+id/tvTotalAmount"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="103.11" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/footer_text"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tipAmount"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

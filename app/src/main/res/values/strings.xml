@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tippy</string>
+    <string name="base_amount">Base Amount</string>
+    <string name="footer_text">Made By Pragala</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="tip_label">Tip</string>
+    <string name="base_label">BaseLabel</string>
 </resources>
